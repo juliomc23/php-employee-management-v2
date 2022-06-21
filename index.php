@@ -14,4 +14,7 @@
 //     $view = new Dashboard;
 // }
 
+require './libs/router.php';
+
+$app = new Router;
 ?>
