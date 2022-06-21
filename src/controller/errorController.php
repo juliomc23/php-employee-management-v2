@@ -2,12 +2,8 @@
 
 class ErrorFile{
 
-    public function __construct($error)
+    public function __construct()
     {
-        if($error == 'file'){
-            echo "The file doesn't exist";
-        }else if($error == 'method'){
-            echo "The method doesn't exist";
-        }
+        echo "The file doesn't exist";
     }
 }

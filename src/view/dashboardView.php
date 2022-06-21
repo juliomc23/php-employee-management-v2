@@ -1,13 +1,3 @@
-<!-- Aqui va el codigo html del dashboard
-
-class Dashboard{
-
-    public function __construct()
-    {
-        echo "Vista de empleados";
-    }
-} -->
-
 <!DOCTYPE html>
 <html lang="en">
 

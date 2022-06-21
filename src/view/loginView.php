@@ -1,13 +1,3 @@
-<!--Aqui va el codigo html del login
-
-class Login{
-
-public function __construct()
-{   
-echo "Vista de login";
-}
-} -->
-
 <!DOCTYPE html>
 <html lang="en">
 
