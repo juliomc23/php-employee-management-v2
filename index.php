@@ -1,5 +1,6 @@
 <?php
 
+require './config/db.php';
 require './libs/router.php';
 require './libs/controller.php';
 require './libs/model.php';

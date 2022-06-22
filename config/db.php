@@ -1,6 +1,6 @@
 <?php
 define('HOST', 'localhost');
-define('DB', 'employee_managment');
+define('DB', 'e_managment');
 define('USER', 'root');
-define('PASSWORD', 'root');
+define('PASSWORD', '');
 define('CHARSET', 'utf8mb4');

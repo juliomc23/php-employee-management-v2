@@ -1,6 +1,6 @@
 <?php
 
-class LoginController extends Controller{
+class Login extends Controller{
 
     public function __construct()
     {
