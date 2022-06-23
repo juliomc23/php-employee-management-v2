@@ -1,6 +1,7 @@
 <?php
+
 define('HOST', 'localhost');
-define('DB', 'e_managment');
+define('DB', 'e_management');
 define('USER', 'root');
 define('PASSWORD', '');
-define('CHARSET', 'utf8mb4');
+define('CHARSET', 'utf8');

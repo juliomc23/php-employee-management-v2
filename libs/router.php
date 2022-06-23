@@ -14,6 +14,7 @@ class Router{
             $file = 'src/controller/login.php';
             require_once $file;
             $controller = new Login();
+            $controller->loadModel('login');
             return false;
         }
             $file = 'src/controller/' . $url[0] . '.php';
@@ -21,6 +22,7 @@ class Router{
         if(file_exists($file)){
             require_once $file;
             $controller = new $url[0];
+            $controller->loadModel($url[0]);
 
             if(isset($url[1])){
                 $controller->{$url[1]}();
@@ -29,9 +31,6 @@ class Router{
             require_once './src/controller/error.php';
             $controller = new ErrorFile();
         }
-    }
 
-    public function getUrl(){
-        
     }
 }
