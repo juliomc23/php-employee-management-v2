@@ -8,7 +8,7 @@ class Employee extends Controller{
         $this->view->render('employee');
     }
 
-    public function getEmployee(){
+    public function employee($id){
         echo "Getting Employees";
     }
 }

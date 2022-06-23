@@ -12,14 +12,14 @@
 <body>
     <main>
         <section class="login__container">
-            <form autocomplete="off" class="form" method="POST" id="loginForm" class="login__form">
+            <form autocomplete="off" class="form" method="POST" id="loginForm" action="<?= BASE_URL?>login/login" class="login__form">
                 <div class="title">Welcome</div>
                 <div class="subtitle">To your Dashboard!</div>
 
                 <div class="input-container ic1">
-                    <input require autocomplete="off" type="text" class="form__input input" name="username"/>
+                    <input require autocomplete="off" type="text" class="form__input input" name="email"/>
                     <div class="cut"></div>
-                    <label for=username class=placeholder>Username</label>
+                    <label for=username class=placeholder>Email</label>
                 </div>
                 <div class="input-container ic2">
                     <input require type="password" class="form__input input" name="password"/>

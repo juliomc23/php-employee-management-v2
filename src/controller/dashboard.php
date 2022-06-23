@@ -7,5 +7,8 @@ class Dashboard extends Controller{
         parent::__construct();
         $this->view->render('dashboard');
     }
-    
+
+    public function employees(){
+        $this->model->getAllEmp();
+    }
 }

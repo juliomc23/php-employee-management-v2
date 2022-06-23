@@ -8,4 +8,13 @@ class Login extends Controller{
         $this->view->render('login');
     }
 
+    function login(){
+        $email = $_POST['email'];
+        $password = $_POST['password'];
+
+        $user = ['email'=> $email, 'password' => $password];
+
+        $this->model->login($user);
+    }
+
 }
