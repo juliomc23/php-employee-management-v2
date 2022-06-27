@@ -31,20 +31,19 @@
             <h2>New Employee</h2>
             <div class="container">
                 <form method="POST" action="./library/employeeController.php" class="employee__form" id="employeeForm">
-                    <input type="hidden" name="newEmployee" value="new">
-                    <input require type="text" name="name" placeholder="Name" class="form__input" />
-                    <input require type="text" name="lastName" placeholder="Last Name" class="form__input" />
-                    <input require type="email" name="email" placeholder="Email" class="form__input" />
+                    <input require type="text" name="name" placeholder="Name" value='<?php echo $this->employee['name']?>' class="form__input" />
+                    <input require type="text" name="lastName" placeholder="Last Name" value='<?php echo $this->employee['last_name']?>' class="form__input" />
+                    <input require type="email" name="email" placeholder="Email" value='<?php echo $this->employee['email']?>' class="form__input" />
                     <select name="gender" class="form__input">
-                        <option selected value="man">Male</option>
-                        <option value="woman">Female</option>
+                        <option value='male'><?php echo $this->employee['gender'] === 'male' ? 'male' : 'female'?></option>
+                        <option value='male'><?php echo $this->employee['gender'] === 'female' ? 'male' : 'female'?></option>
                     </select>
                     <input require type="text" name="city" placeholder="City" class="form__input" />
-                    <input require type="text" name="streetAddress" placeholder="Street Address" class="form__input" />
-                    <input require type="text" name="state" placeholder="State" class="form__input" />
-                    <input require type="number" name="age" placeholder="Age" class="form__input" />
-                    <input require type="number" name="postalCode" placeholder="Postal Code" class="form__input" />
-                    <input require type="tel" name="phoneNumber" placeholder="Phone Number" class="form__input" />
+                    <input require type="text" name="streetAddress" placeholder="Street Address" value='<?php echo $this->employee['street_address']?>' class="form__input" />
+                    <input require type="text" name="state" placeholder="State" value='<?php echo $this->employee['state']?>' class="form__input" />
+                    <input require type="number" name="age" placeholder="Age" value='<?php echo $this->employee['age']?>' class="form__input" />
+                    <input require type="number" name="postalCode" placeholder="Postal Code" value='<?php echo $this->employee['postal_code']?>' class="form__input" />
+                    <input require type="tel" name="phoneNumber" placeholder="Phone Number" value='<?php echo $this->employee['phone_number']?>' class="form__input" />
                     <div class="employee__form__btn__container">
                         <button type="submit" value="submint" id="submitForm" class="formSubmitBtn primary__btn">SUBMIT</button>
                     </div>

@@ -77,7 +77,7 @@ class employeeModel extends Model{
             $query->execute();
             $employees = $query->fetch();
     
-            print_r(json_encode($employees));
+            return $employees;
         } catch (PDOException $e) {
             var_dump($e);
         }

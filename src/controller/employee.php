@@ -8,9 +8,7 @@ class Employee extends Controller{
         // $this->view->render('employee');
     }
     public function renderView(){
-
         $this->view->render('employee');
-
     }
 
     public function getAllEmployees()
@@ -39,7 +37,10 @@ class Employee extends Controller{
 
     public function employee($params){
         $empId = $params[0];
-        $this->model->getEmpById($empId);
+        $employee = $this->model->getEmpById($empId);
+        
+        $this->view->employee = $employee;
+        $this->view->render('employee');
     }
 
 }

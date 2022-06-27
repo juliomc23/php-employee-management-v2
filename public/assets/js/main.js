@@ -13,7 +13,7 @@ $("#jsGrid").jsGrid({
         // `${baseUrl}employees/${item.item.id}`
         // );
      console.log(item.item.id);
-     window.location.href = "employee/" + item.item.id
+     window.location.href = "employee/employee/" + item.item.id
   },
 
   controller: {
