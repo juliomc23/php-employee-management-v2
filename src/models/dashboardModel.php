@@ -1,6 +1,7 @@
 <?php
 
 class dashboardModel extends Model{
+    public $id;
 
     public function __construct()
     {
@@ -16,6 +17,28 @@ class dashboardModel extends Model{
             $employees = $query->fetchAll();
 
             print_r(json_encode($employees));
+        } catch (PDOException $e) {
+            var_dump($e);
+        }
+    }
+
+    // public function updateEmp($id){
+    //     $query = $this->db->connect()->prepare('DELETE from employees WHERE id = :id');
+    //     $query->bindParam(':id', $id);
+    
+    //     try {
+    //         $query->execute();
+    //     } catch (PDOException $e) {
+    //         var_dump($e);
+    //     }
+    // }
+
+    public function deleteEmp($id){
+        $query = $this->db->connect()->prepare('DELETE from employees WHERE id = :id');
+        $query->bindParam(':id', $id);
+    
+        try {
+            $query->execute();
         } catch (PDOException $e) {
             var_dump($e);
         }
