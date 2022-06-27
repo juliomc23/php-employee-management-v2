@@ -7,9 +7,12 @@ $("#jsGrid").jsGrid({
   paging: true,
   autoload: true,
 
-  rowDoubleClick: function (item) {
+  rowClick: function (item) {
+    console.log(item);
      window.location.replace(
-       `${baseUrl}employees/${item.item.id}`
+      //  `${baseUrl}employee/renderEmrenderEmployeeployee/${item.item.id}`
+        //  `${baseUrl}employee/renderEmployee` + item.item.id
+        window.location.href = "employee/renderEmployee/" + item.item.id
      );
   },
 
