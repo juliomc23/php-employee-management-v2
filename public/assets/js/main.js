@@ -6,11 +6,14 @@ $("#jsGrid").jsGrid({
   sorting: true,
   paging: true,
   autoload: true,
+  deleteConfirm: "Do you really want to delete data?",
 
-  rowDoubleClick: function (item) {
-     window.location.replace(
-       `${baseUrl}employees/${item.item.id}`
-     );
+  rowClick: function (item) {
+        // window.location.replace(
+        // `${baseUrl}employees/${item.item.id}`
+        // );
+     console.log(item.item.id);
+     window.location.href = "employee/" + item.item.id
   },
 
   controller: {
