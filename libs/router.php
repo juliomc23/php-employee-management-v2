@@ -19,18 +19,31 @@ class Router{
         }
             $file = 'src/controller/' . $url[0] . '.php';
 
-        if(file_exists($file)){
-            require_once $file;
-            $controller = new $url[0];
-            $controller->loadModel($url[0]);
-
-            if(isset($url[1])){
-                $controller->{$url[1]}(); 
+            if(file_exists($file)){
+                require_once $file;
+                $controller = new $url[0];
+                $controller->loadModel($url[0]);
+    
+                $nparam = sizeof($url);
+    
+                if($nparam > 1){
+                    if($nparam > 2){
+                        $params = [];
+                        for($i = 2; $i<$nparam; $i++){
+                            array_push($params, $url[$i]);
+                        }
+                        $controller->{$url[1]}($params);
+                    }else{
+                        $controller->{$url[1]}();
+                    }
+                }else{
+                    $controller->renderView();
+                }
+    
+            }else{
+                require_once './src/controller/error.php';
+                $controller = new ErrorFile();
             }
-        }else{
-            require_once './src/controller/error.php';
-            $controller = new ErrorFile();
-        }
 
     }
 }
