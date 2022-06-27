@@ -25,7 +25,7 @@ class Router{
             $controller->loadModel($url[0]);
 
             if(isset($url[1])){
-                $controller->{$url[1]}();
+                $controller->{$url[1]}(); 
             }
         }else{
             require_once './src/controller/error.php';
