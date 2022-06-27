@@ -7,6 +7,11 @@ class Employee extends Controller{
         parent::__construct();
         // $this->view->render('employee');
     }
+    public function renderView(){
+
+        $this->view->render('employee');
+
+    }
 
     public function getAllEmployees()
     {
@@ -30,6 +35,11 @@ class Employee extends Controller{
             http_response_code(400);
             echo json_encode(['message' => $th->getMessage()]);
         }
+    }
+
+    public function employee($params){
+        $empId = $params[0];
+        $this->model->getEmpById($empId);
     }
 
 }

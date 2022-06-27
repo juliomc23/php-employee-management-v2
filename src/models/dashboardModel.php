@@ -31,4 +31,6 @@ class dashboardModel extends Model{
             var_dump($e);
         }
     }
+    
 }
+

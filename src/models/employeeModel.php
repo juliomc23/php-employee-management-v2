@@ -69,4 +69,17 @@ class employeeModel extends Model{
             throw new Exception($e->getMessage());
         }
     }
+    public function getEmpById($id){
+        $query = $this->db->connect()->prepare('SELECT * from employees WHERE id = :id');
+        $query->bindParam(':id', $id);
+    
+        try {
+            $query->execute();
+            $employees = $query->fetch();
+    
+            print_r(json_encode($employees));
+        } catch (PDOException $e) {
+            var_dump($e);
+        }
+    }
 }
