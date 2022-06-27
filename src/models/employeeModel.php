@@ -21,13 +21,13 @@ class employeeModel extends Model{
 
             while ($row=$query->fetch(PDO::FETCH_ASSOC)) {
                     $employees[] = [
-                        'id' => $row['user_id'],
+                        'id' => $row['id'],
                         'name' => $row['name'],
-                        'lastname' => $row['lastname'],
+                        'lastname' => $row['last_name'],
                         'email' => $row['email'],
                         'gender' => $row['gender'],
                         'age' => $row['age'],
-                        'address' => $row['address'],
+                        'address' => $row['street_address'],
                         'city' => $row['city'],
                         'state' => $row['state'],
                         'postalCode' => $row['postal_code'],
