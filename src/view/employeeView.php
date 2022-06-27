@@ -1,3 +1,9 @@
+<?php
+
+var_dump($this->employee);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +36,7 @@
         <sectiion class="employee__form__containeer">
             <h2>New Employee</h2>
             <div class="container">
-                <form method="POST" action="./library/employeeController.php" class="employee__form" id="employeeForm">
+                <form method="POST" action="../updateEmp" class="employee__form" id="employeeForm">
                     <input type="hidden" name="id" value='<?php echo $this->employee['id']?>' class="form__input" />
                     <input require type="text" name="name" placeholder="Name" value='<?php echo $this->employee['name']?>' class="form__input" />
                     <input require type="text" name="lastName" placeholder="Last Name" value='<?php echo $this->employee['last_name']?>' class="form__input" />
@@ -39,7 +45,7 @@
                         <option value='male'><?php echo $this->employee['gender'] === 'male' ? 'male' : 'female'?></option>
                         <option value='male'><?php echo $this->employee['gender'] === 'female' ? 'male' : 'female'?></option>
                     </select>
-                    <input require type="text" name="city" placeholder="City" class="form__input" />
+                    <input require type="text" name="city" placeholder="City" class="form__input" value='<?php echo $this->employee['city']?>'/>
                     <input require type="text" name="streetAddress" placeholder="Street Address" value='<?php echo $this->employee['street_address']?>' class="form__input" />
                     <input require type="text" name="state" placeholder="State" value='<?php echo $this->employee['state']?>' class="form__input" />
                     <input require type="number" name="age" placeholder="Age" value='<?php echo $this->employee['age']?>' class="form__input" />

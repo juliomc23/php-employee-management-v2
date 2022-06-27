@@ -82,4 +82,30 @@ class employeeModel extends Model{
             var_dump($e);
         }
     }
+
+    public function update($employee){
+        var_dump($employee);
+
+        $query = $this->db->connect()->prepare("UPDATE employees SET name=:name,last_name=:last_name,email=:email,gender=:gender,age=:age,street_address=:street_address,city=:city,state=:state,postal_code=:postal_code,phone_number=:phone_number WHERE id = :id");
+        // $query = createConnection()->prepare("UPDATE employees SET birth_date=:birth_date,first_name=:first_name,last_name=:last_name,gender=:gender,hire_date=:hire_date WHERE emp_no=:emp_no");
+        
+        $query->bindParam(":name", $employee['name']);
+        $query->bindParam(":last_name", $employee['lastName']);
+        $query->bindParam(":email", $employee['email']);
+        $query->bindParam(":gender", $employee['gender']);
+        $query->bindParam(":age", $employee['age']);
+        $query->bindParam(":street_address", $employee['streetAddress']);
+        $query->bindParam(":city", $employee['city']);
+        $query->bindParam(":state", $employee['state']);
+        $query->bindParam(":postal_code", $employee['postalCode']);
+        $query->bindParam(":phone_number", $employee['phoneNumber']);
+        $query->bindParam(":id", $employee['id']);
+
+        try {
+            $query->execute();
+            return[true];
+        } catch (PDOException $e) {
+            var_dump($e);
+        }
+    }
 }

@@ -43,4 +43,9 @@ class Employee extends Controller{
         $this->view->render('employee');
     }
 
+    public function updateEmp(){
+        $this->model->update($_POST);
+        header('Location:' . BASE_URL .'dashboard');
+    }
+
 }
