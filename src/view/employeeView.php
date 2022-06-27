@@ -1,9 +1,3 @@
-<?php
-
-var_dump($this->employee);
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
