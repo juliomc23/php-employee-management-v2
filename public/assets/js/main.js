@@ -36,6 +36,15 @@ $("#jsGrid").jsGrid({
       })
     },
     deleteItem: function (item) {
+      $.ajax({
+        type: "DELETE",
+        url: `${baseUrl}employee/delete/1`,
+        dataType: "json",
+        data: item,
+        error: function (xhr, status) {
+          console.log(xhr, status);
+        },
+      })
       console.log("object");
       // deleteItemHandler(item);
     },
