@@ -20,4 +20,15 @@ class dashboardModel extends Model{
             var_dump($e);
         }
     }
+
+    public function deleteEmp($id){
+        $query = $this->db->connect()->prepare('DELETE from employees WHERE id = :id');
+        $query->bindParam(':id', $id);
+    
+        try {
+            $query->execute();
+        } catch (PDOException $e) {
+            var_dump($e);
+        }
+    }
 }
