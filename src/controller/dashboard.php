@@ -5,6 +5,9 @@ class Dashboard extends Controller{
     public function __construct()
     {
         parent::__construct();
+    }
+
+    public function renderView(){
         $this->view->render('dashboard');
     }
 
