@@ -31,6 +31,7 @@
             <h2>New Employee</h2>
             <div class="container">
                 <form method="POST" action="./library/employeeController.php" class="employee__form" id="employeeForm">
+                    <input type="hidden" name="id" value='<?php echo $this->employee['id']?>' class="form__input" />
                     <input require type="text" name="name" placeholder="Name" value='<?php echo $this->employee['name']?>' class="form__input" />
                     <input require type="text" name="lastName" placeholder="Last Name" value='<?php echo $this->employee['last_name']?>' class="form__input" />
                     <input require type="email" name="email" placeholder="Email" value='<?php echo $this->employee['email']?>' class="form__input" />
