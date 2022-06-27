@@ -29,23 +29,9 @@
         <div id="jsGrid" class="pb-4"></div>
     </main>
 </body>
+
+<script>
+    let baseUrl = '<?= BASE_URL ?>';
+</script>
 <script src="./public/assets/js/main.js"></script>
 </html>
-
-<!-- <header>
-            <div id="logo" class="logo__container">
-                <img src="" alt="" />
-            </div>
-            <h1>EMPLOYEE MANAGEMENT</h1>
-            <nav>
-                <div class="links__container">
-                    <span id="dashboardLink" class="links__container--item">DASHBOARD</span>
-                    <span id="employeeLink" class="links__container--item">EMPLOYEE</span>
-                </div>
-                <div class="logout__btn_container">
-                    <a class="logout__btn" href="../src/library/loginController.php?logout=true" name="logout">LogOut</a>
-                </div>
-                <div>
-                </div>
-            </nav>
-        </header> -->
