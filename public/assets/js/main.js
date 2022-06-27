@@ -38,7 +38,7 @@ $("#jsGrid").jsGrid({
     deleteItem: function (item) {
       $.ajax({
         type: "DELETE",
-        url: `${baseUrl}employee/delete/1`,
+        url: `${baseUrl}dashboard/delete/` + item.id,
         dataType: "json",
         data: item,
         error: function (xhr, status) {
