@@ -30,7 +30,7 @@ class loginModel extends Model{
             if($this->postEmail === $this->queryEmail && password_verify($this->postPassword, $this->queryPassword)){
                 session_start();
                 $_SESSION['name'] = $employees[0]['first_name'];
-                header('Location:' . BASE_URL .'dashboard/employees');
+                header('Location:' . BASE_URL .'dashboard');
             }
         }catch(PDOException $e){
             return $e;
