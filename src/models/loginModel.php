@@ -31,6 +31,8 @@ class loginModel extends Model{
                 session_start();
                 $_SESSION['name'] = $employees[0]['first_name'];
                 header('Location:' . BASE_URL .'dashboard');
+            }else{
+                header('Location:' . BASE_URL .'login');
             }
         }catch(PDOException $e){
             return $e;
