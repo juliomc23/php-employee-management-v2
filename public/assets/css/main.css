@@ -1,0 +1,27 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: auto;
+    height: auto;
+    background: red; 
+  }
+
+  .container {
+    width: auto;
+    height: auto;
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 100px;
+  }
+
+  .container h2 {
+    margin-bottom: 30px;
+  }
+

@@ -10,8 +10,14 @@ class View{
     }
 
     public function render($view){
-        $path = getcwd();
-        $fullpath = $path .'/' . 'src/' . 'view/' . $view . 'View.php';
-        require $fullpath;
+         $path = getcwd();
+         $fullpath = $path .'/' . 'src/' . 'view/' . $view . 'view.php';
+         require $fullpath;
     }
 }
+
+
+
+
+
+// $fullpath = $path .'/' . 'src/' . 'view/' . $view . 'View.php';

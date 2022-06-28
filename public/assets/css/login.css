@@ -1,0 +1,42 @@
+body {
+  background: rgb(58, 134, 180);
+  background: linear-gradient(
+    293deg,
+    rgba(58, 134, 180, 0.9780287114845938) 0%,
+    rgba(50, 229, 244, 1) 100%
+  );
+}
+.login-container {
+  height: 100vh;
+}
+.login-form {
+  min-height: 400px;
+  width: 50%;
+  background: #282726;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form h2 {
+  text-align: center;
+  color: #282726;
+  font-weight: 700;
+}
+.btnSubmit {
+  font-weight: 600;
+  width: 100%;
+  color: #f8f9fa;
+  background-color: rgb(87, 147, 254);
+  border: none;
+  padding: 2%;
+}
+.btnSubmit:hover {
+  background-color: aqua;
+}
+.rounded-5 {
+  border-radius: 2rem;
+}
+.rounded-4 {
+  border-radius: 0.8rem;
+}
+.max-width-450 {
+  max-width: 450px;
+}
