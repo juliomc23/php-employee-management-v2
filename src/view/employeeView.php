@@ -42,12 +42,13 @@ foreach ($genderArray as $genderItem) {
 
     <div class="container-fluid">
 
-        <main class="col-lg-8 col-md-10 p-2 mx-auto gy-2">
+        <main class="col-lg-8 col-md-10 p-2 mx-auto gy-2 mt-5">
             <div class="pb-2">
                 <h2 id="employeeTitle">Employee</h2>
             </div>
             <div class="col">
                 <form method="POST" action="../updateEmp" class="employee__form needs-validation" id="employeeForm">
+                <input type="hidden" name="id" value='<?php echo $this->employee['id']?>' class="form__input" />
                     <div class="row g-3">
                         <div class="col-sm-6">
                             <label for="name" class="form-label">First name</label>
@@ -123,7 +124,7 @@ foreach ($genderArray as $genderItem) {
                     </div>
 
                     <div class="text-center pt-4">
-                        <button type="submit" class="btn btn-primary" id="submitBtn">Update Employee</button>
+                        <button type="submit" value="submint" id="submitForm" class="formSubmitBtn btn btn-primary">Update Employee</button>
                         <a href="<?= BASE_URL ?>" class="btn btn-secondary">Return</a>
 
                     </div>
@@ -157,16 +158,18 @@ foreach ($genderArray as $genderItem) {
                     The employee has been added to the database
                 </div>
                 <div class="modal-footer border-0">
-                    <a href="./dashboard.php" class="btn btn-primary mx-auto">Go back to dashboard</a>
+                    <a href="dashboardView.php" class="btn btn-primary mx-auto">Go back to dashboard</a>
                 </div>
             </div>
         </div>
     </div>
     </main>
 </div>
-
 </body>
-
+<script src="./public/assets/js/main.js"></script>
+<script>
+    let baseUrl = '<?= BASE_URL ?>';
+</script>
 </html>
 </body>
 
