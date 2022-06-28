@@ -80,42 +80,42 @@ foreach ($genderArray as $genderItem) {
 
                         <div class="col-sm-6">
                             <label for="city" class="form-label">City</label>
-                            <input type="text" class="form-control" id="city" value="" required>
+                            <input require type="text" name="city" placeholder="City" class="form__input form-control" value='<?php echo $this->employee['city']?>'/>
                             <div class="invalid-feedback">
                                 Please enter the employee's city.
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <label for="streetAddress" class="form-label">Street Address</label>
-                            <input type="text" class="form-control" id="streetAddress" value="" required>
+                            <input require type="text" name="streetAddress" placeholder="Street Address" value='<?php echo $this->employee['street_address']?>' class="form__input form-control" />
                             <div class="invalid-feedback">
                                 Please enter the street number.
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <label for="state" class="form-label">State</label>
-                            <input type="text" class="form-control" id="state" value="" required>
+                            <input require type="text" name="state" placeholder="State" value='<?php echo $this->employee['state']?>' class="form__input form-control" />
                             <div class="invalid-feedback">
                                 Please enter the state.
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <label for="age" class="form-label">Age</label>
-                            <input type="number" class="form-control" id="age" value="" required>
+                            <input require type="number" name="age" placeholder="Age" value='<?php echo $this->employee['age']?>' class="form__input form-control" />
                             <div class="invalid-feedback">
                                 Please enter the employee's age.
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <label for="postalCode" class="form-label">Postal Code</label>
-                            <input type="text" class="form-control" id="postalCode" value="" required>
+                            <input require type="number" name="postalCode" placeholder="Postal Code" value='<?php echo $this->employee['postal_code']?>' class="form__input form-control" />
                             <div class="invalid-feedback">
                                 Please enter the employee's postal code.
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <label for="phoneNumber" class="form-label">Phone Number</label>
-                            <input type="number" class="form-control" id="phoneNumber" value="" required>
+                            <input require type="tel" name="phoneNumber" placeholder="Phone Number" value='<?php echo $this->employee['phone_number']?>' class="form__input form-control" />
                             <div class="invalid-feedback">
                                 Please enter the phone number.
                             </div>
@@ -163,14 +163,7 @@ foreach ($genderArray as $genderItem) {
         </div>
     </div>
     </main>
-    </div>
-
-
-    <script>
-        let userId = <?= $this->id ?>;
-        let baseUrl = '<?= BASE_URL ?>';
-    </script>
-    <script type="text/javascript" src="<?= BASE_URL ?>/assets/js/employee.js"></script>
+</div>
 
 </body>
 
